@@ -1,0 +1,30 @@
+// Name: Chihiro Nakazawa Mailhot
+// Seneca Student ID: 138050182
+// Seneca email: cnakazawa@myseneca.ca
+// Date of completion: Nov. 21, 2020
+//
+// I confirm that I am the only author of this file
+// and the content was created entirely by me.
+
+When I was working on the Utilities, Station, and Customer Module which were in milestones 1 and 2, 
+it was still okay to understand the structures also what I should do.
+However, in milestone 3, I got lost.
+Therefore, the lab session on Nov. 20th helped me a lot to understand the requirement especially the 
+structure of custom constructor and run() in the LineManager module.
+Thank you for teaching the class with your hard work to lead students to success.
+
+In the LineManager module, I thought it would be a good idea to have another class instance of std::vector<Workstation*> to store the sorted stations.
+If I could do so, I would create the sorted stations in the custom constructor 
+because the data in "const std::string filename" which was the first parameter was already instructing the order of the stations.
+I used for-loops in the run() and displayStationSorted() to find the first station, and which were duplicating processes.
+However, by having the sorted AssenblyLine of std::vector<Workstation*>, I could access directly the first station. 
+Also, I don't have to use getNextStation() to get the next station in these for-loops.
+
+For instance, if I have the std::vector<Workstation*> sortedStations as the LineManager class instance, 
+I'll use a custom constructor to store the sorted station.
+At the end of the first for-loop: for (size_t i = 0; i < ws.size(); i++) {...}, I'll add "sortedStations.push_back(ws[i]);"
+The code for displayStationSorted() will be...
+		for (auto i : sortedStations) {
+			i->display(std::cout);
+		}
+which is much shorter and clearer to understand the code.

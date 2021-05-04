@@ -1,0 +1,2 @@
+E:\3rd_Semester\OOP345\ws-and-project\OOP-Project-master\MS3\ms03\Debug\ms03.exe
+E:\3rd_Semester\OOP345\ws-and-project\OOP-Project-master\MS3\ms03\Debug\ms03.pdb
